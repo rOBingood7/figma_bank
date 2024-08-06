@@ -1,0 +1,15 @@
+{
+  "users": [
+    {
+      "id": "6b91823c-5813-4aa8-8284-802228de6404",
+      "createdAt": "2024-08-06T14:21:31.490Z",
+      "updatedAt": "2024-08-06T14:21:31.490Z",
+      "email": "dsarifkulo021@gmail.com",
+      "name": "Daler",
+      "surname": "Sharifkulov",
+      "password": "1234Daler"
+    }
+  ],
+  "wallets": [],
+  "transactions": []
+}
