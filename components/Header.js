@@ -29,5 +29,5 @@ export function Header() {
   header_right.append(email_span, logout_link);
   header.append(header_container);
 
-  return header
+  document.querySelector('.head').append(header)
 }
