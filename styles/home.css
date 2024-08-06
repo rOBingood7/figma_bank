@@ -1,0 +1,164 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background: #f0f0f0;
+  padding: 25px;
+}
+.header_container {
+  width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_left,
+.header_right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.header_left a,
+.header_right a {
+  margin-right: 20px;
+  text-decoration: none;
+  color: black;
+  font-family: Gilroy, sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 19.41px;
+  text-align: left;
+}
+.header_right a {
+  background-image: url("/imgs/log-out (1) 1.svg");
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+h1 {
+  padding-top: 44px;
+  font-family: Gilroy;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 59.42px;
+  text-align: left;
+}
+
+.email {
+  color: #0047ff;
+  font-family: Gilroy;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 22.28px;
+  text-align: left;
+  padding-top: 10px;
+}
+.wallets {
+  padding-top: 74px;
+}
+.wallets h2 {
+  font-family: Gilroy;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29.11px;
+  text-align: left;
+  padding-bottom: 20px;
+}
+.wallet_container {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.wallet {
+  padding: 20px;
+  border-radius: 15px;
+  color: white;
+  text-align: left;
+  font-size: 18px;
+  width: 280px;
+  height: 160px;
+  display: grid;
+  gap: 80px;
+  margin-bottom: 20px;
+}
+.wallet p {
+  font-family: Gilroy;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29.11px;
+  text-align: left;
+}
+.wallet span {
+  font-family: Gilroy;
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 17.33px;
+  text-align: left;
+}
+
+.card1 {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b);
+}
+.card2 {
+  background: linear-gradient(84.37deg, #5f0a87 2.27%, #a4508b 92.26%);
+}
+.card3 {
+  background: linear-gradient(84.37deg, #20bf55 2.27%, #01baef 92.26%);
+}
+.card4 {
+  background: linear-gradient(84.37deg, #380036 2.27%, #0cbaba 92.26%);
+}
+
+.view_all {
+  font-family: Gilroy;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19.6px;
+  text-align: left;
+  color: #0047ff;
+}
+.transactions {
+  padding-top: 74px;
+}
+.transactions h3 {
+  font-family: Gilroy;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 29.11px;
+  text-align: left;
+}
+table {
+  width: 100%;
+  margin: 30px 0 20px;
+}
+
+table tbody tr {
+  border-bottom: 1px solid #b9c0d1;
+}
+
+table th,
+table td {
+  padding: 20px 0;
+  text-align: left;
+  font-size: 16px;
+}
+
+table th {
+  font-family: Gilroy;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 17.15px;
+  text-align: left;
+  color: #b9c0d1;
+}
