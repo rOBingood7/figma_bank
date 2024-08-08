@@ -16,7 +16,7 @@ export function Header() {
 
   email_span.innerHTML = "alexadams@google.com";
   logout_link.href = "#";
-  home_link.href = "#";
+  home_link.href = "/";
   wallet_link.href = "#";
   transaction_link.href = "#";
 
@@ -29,5 +29,5 @@ export function Header() {
   header_right.append(email_span, logout_link);
   header.append(header_container);
 
-  return header
+  document.querySelector(".head").append(header);
 }

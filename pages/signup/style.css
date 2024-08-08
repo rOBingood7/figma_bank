@@ -40,6 +40,9 @@ body {
     box-sizing: border-box;
     border: 1px solid #000000
   }
+  .error {
+    border: 3px solid red !important;
+  }
   ::placeholder {
     padding-left: 25px;
     font-family: Gilroy;
