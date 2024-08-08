@@ -15,7 +15,7 @@ export function Header() {
   header_right.classList.add("header_right");
 
   email_span.innerHTML = "alexadams@google.com";
-  logout_link.href = "#";
+  logout_link.href = "/pages/signin/";
   home_link.href = "/";
   wallet_link.href = "#";
   transaction_link.href = "#";

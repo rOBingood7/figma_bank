@@ -1,4 +1,4 @@
-import { getData, postData } from "../../lib/https.request";
+import { getData, postData } from "../../lib/http.request";
 
 const patterns = {
   name: /^[a-z ,.'-]+$/i,

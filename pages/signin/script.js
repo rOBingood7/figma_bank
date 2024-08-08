@@ -1,4 +1,4 @@
-import { getData } from "../../lib/https.request";
+import { getData } from "../../lib/http.request";
 
 const patterns = {
   email: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g,
