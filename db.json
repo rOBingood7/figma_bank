@@ -1,11 +1,21 @@
 {
   "users": [
     {
+<<<<<<< HEAD
       "id": "538fba7f-5e4c-42c4-8739-9683569d9462",
       "email": "mehrojhabibov05@gmail.com",
       "name": "Muxtorov Mirkomil",
       "surname": "XURRAMOV",
       "password": "Mirkomil2005"
+=======
+      "id": "6b91823c-5813-4aa8-8284-802228de6404",
+      "createdAt": "2024-08-06T14:21:31.490Z",
+      "updatedAt": "2024-08-06T14:21:31.490Z",
+      "email": "dsarifkulo021@gmail.com",
+      "name": "Daler",
+      "surname": "Sharifkulov",
+      "password": "1234Daler"
+>>>>>>> a6bbcbc891c0b3b2df067a6c8ffc23f267f77479
     }
   ],
   "wallets": [],

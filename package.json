@@ -13,7 +13,10 @@
   },
   "dependencies": {
     "axios": "^1.7.3",
+<<<<<<< HEAD
     "concurrently": "^8.2.2",
+=======
+>>>>>>> a6bbcbc891c0b3b2df067a6c8ffc23f267f77479
     "json-server": "^1.0.0-beta.1"
   }
 }
