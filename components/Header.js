@@ -9,13 +9,14 @@ export function Header() {
   const wallet_link = document.createElement("a");
   const transaction_link = document.createElement("a");
 
+  const localed = JSON.parse(localStorage.getItem('user')) 
+
   header.classList.add("header");
   header_container.classList.add("header_container");
   header_left.classList.add("header_left");
   header_right.classList.add("header_right");
 
-  email_span.innerHTML = "alexadams@google.com";
-  logout_link.href = "/pages/signin/";
+  email_span.innerHTML = localed.email;
   home_link.href = "/";
   wallet_link.href = "#";
   transaction_link.href = "#";
@@ -29,5 +30,11 @@ export function Header() {
   header_right.append(email_span, logout_link);
   header.append(header_container);
 
+  logout_link.onclick = () => {
+    localStorage.clear()
+
+    location.assign('/pages/signin/')
+
+  }
   document.querySelector(".head").append(header);
 }

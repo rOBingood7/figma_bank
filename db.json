@@ -13,6 +13,13 @@
       "name": "Nigora",
       "surname": "Utaeva",
       "password": "Utaevanigora200"
+    },
+    {
+      "id": "7133cf88-e144-431a-93d6-e7595c89be4c",
+      "email": "dsarifkulo021@gmail.com",
+      "name": "Daler",
+      "surname": "Sharifkulov",
+      "password": "1234Daler"
     }
   ],
   "wallets": [],
