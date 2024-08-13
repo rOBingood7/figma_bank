@@ -1,25 +1,11 @@
 {
   "users": [
     {
-      "id": "538fba7f-5e4c-42c4-8739-9683569d9462",
-      "email": "mehrojhabibov05@gmail.com",
+      "id": "cad0650e-b4d0-45a4-9606-1f7b824c1a6d",
+      "email": "mirkomilmuhtorov22@gmail.com",
       "name": "Muxtorov Mirkomil",
       "surname": "XURRAMOV",
       "password": "Mirkomil2005"
-    },
-    {
-      "id": "8e78520a-5b49-4c60-8b26-a6a3b1dec134",
-      "email": "utaevanigora@mail.ru",
-      "name": "Nigora",
-      "surname": "Utaeva",
-      "password": "Utaevanigora200"
-    },
-    {
-      "id": "7133cf88-e144-431a-93d6-e7595c89be4c",
-      "email": "dsarifkulo021@gmail.com",
-      "name": "Daler",
-      "surname": "Sharifkulov",
-      "password": "1234Daler"
     }
   ],
   "wallets": [],
