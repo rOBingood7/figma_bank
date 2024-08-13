@@ -8,6 +8,14 @@
       "password": "Mirkomil2005"
     }
   ],
-  "wallets": [],
+  "wallets": [
+    {
+      "id": "50676a5d-586e-460d-bffd-ee872323e6ae",
+      "userId": "cad0650e-b4d0-45a4-9606-1f7b824c1a6d",
+      "name": "aa",
+      "currency": "USD",
+      "amount": "107"
+    }
+  ],
   "transactions": []
 }

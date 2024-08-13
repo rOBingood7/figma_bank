@@ -71,7 +71,8 @@ body {
   background: #0047ff;
 }
 
-.select_inside_input option, .select_inside_input option {
+.select_inside_input option,
+.select_inside_input option {
   padding-left: 25px;
   font-family: Gilroy;
   font-size: 16px;
@@ -79,4 +80,7 @@ body {
   line-height: 19.6px;
   text-align: left;
   color: #000000;
+}
+.error {
+  border: 3px solid red;
 }
