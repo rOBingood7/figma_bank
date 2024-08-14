@@ -1,4 +1,6 @@
-export function Table() {
+import moment from 'moment'
+
+export function Table(item) {
   const tr = document.createElement("tr");
   const id = document.createElement("td");
   const type = document.createElement("td");
@@ -6,11 +8,11 @@ export function Table() {
   const sum = document.createElement("td");
   const date = document.createElement("td");
 
-  id.innerHTML = "1232312";
-  type.innerHTML = "VISA";
-  category.innerHTML = "Автомобиль";
-  sum.innerHTML = "414,000,000";
-  date.innerHTML = "4 дня назад";
+  id.innerHTML = item.id.slice(0,8);
+  type.innerHTML = item.wallet.name;
+  category.innerHTML = item.category;
+  sum.innerHTML = `${Number(item.total).toLocaleString()} ${item.wallet.currency}`;
+  date.innerHTML = moment(item.createdAt).fromNow();;
 
   tr.append(id, type, category, sum, date);
   return tr;
