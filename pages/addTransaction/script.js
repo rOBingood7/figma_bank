@@ -1,30 +1,63 @@
-import { getData, postData } from "../../lib/http.request";
+import {
+	getData,
+	patchData,
+	postData
+} from "../../lib/http.request";
 
 const form = document.querySelector("form");
-const wallets = await getData("/wallets");
+const select = form.querySelector("select");
 const user_string = localStorage.getItem("user");
 const userId = JSON.parse(user_string).id;
+let wallets = []
 
 form.onsubmit = (e) => {
-  e.preventDefault();
-  submit(e.target);
+	e.preventDefault();
+	submit(e.target);
 };
 
 async function submit(target) {
-  const fm = new FormData(target);
-  const walletName = fm.get("walletName");
-  const wallet = wallets.data.find((w) => w.name === walletName);
+	const fm = new FormData(target);
 
-  const transaction = {
-    id: crypto.randomUUID(),
-    createdAt: new Date().toISOString(),
-    updatedAt: new Date().toISOString(),
-  };
+	const transaction = {
+		id: crypto.randomUUID(),
+		createdAt: new Date().toISOString(),
+		updatedAt: new Date().toISOString(),
+	};
 
-  fm.forEach((val, key) => (transaction[key] = val));
+	fm.forEach((val, key) => (transaction[key] = val));
 
-  await postData("/transactions", transaction);
+	const findedWallet = wallets.find(item => item.id ===  transaction.walletId) 
+	
+	if(Number(transaction.total) > Number(findedWallet.amount)) {
+		alert('Недостаточно денег на счету!')
+		return
+	}
 
-  form.reset();
-  location.assign("/pages/transactions/");
+	delete findedWallet.id
+	delete findedWallet.userId
+
+	transaction.wallet = findedWallet
+
+	const res = await patchData('/wallets/' + transaction.walletId, {amount: findedWallet.amount - transaction.total})
+
+	if(res.status !== 200) {
+		alert('Не получилось выполнить транзакцию!')
+		return
+	}
+
+	await postData("/transactions", transaction);
+
+	form.reset();
+	location.assign("/pages/transactions/");
 }
+
+const res = await getData('/wallets?userId=' + userId)
+
+if(res.status === 200) {
+	wallets = res.data
+	for(let item of res.data) {
+		let opt = new Option(item.name, item.id)
+		select.append(opt)
+	}
+}
+
