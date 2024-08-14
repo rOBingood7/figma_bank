@@ -4,7 +4,7 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0 auto;
+  margin: 0;
 }
 
 .container {
@@ -18,7 +18,7 @@ body {
 
 .registration_form {
   display: grid;
-  flex-direction: row;
+  gap: 10px;
   align-items: center;
 }
 
@@ -30,7 +30,8 @@ body {
   text-align: center;
 }
 
-.registration_form input {
+.registration_form input,
+.registration_form select {
   width: 450px;
   height: 55px;
   padding: 10px;
@@ -39,10 +40,10 @@ body {
   box-sizing: border-box;
   border: 1px solid #000000;
 }
-.error {
-  border: 3px solid red !important;
-}
-::placeholder {
+
+.registration_form input::placeholder,
+.registration_form select::placeholder,
+.select_inside_input option {
   padding-left: 25px;
   font-family: Gilroy;
   font-size: 16px;

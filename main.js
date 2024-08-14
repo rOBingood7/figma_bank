@@ -5,19 +5,17 @@ import { Table } from "./components/Table";
 import { getData } from "./lib/http.request";
 Header();
 
-const localed = JSON.parse(localStorage.getItem('user')) 
-const email = document.querySelector('.email')
+const localed = JSON.parse(localStorage.getItem("user"));
 const wallet_container = document.querySelector(".wallet_container");
 const tbody = document.querySelector("tbody");
+const email = document.querySelector(".email");
 const h1 = document.querySelector("h1");
 
-h1.innerHTML = `Добро пожаловать, ${localed.name} ${localed.surname}`
-email.innerHTML = localed.email
+h1.innerHTML = `Добро пожаловать, ${localed.name} ${localed.surname}`;
+email.innerHTML = localed.email;
 
-
-const res = await getData('/wallets?userId=' + localed.id)
+const res = await getData("/wallets?userId=" + localed.id);
 
 reload(res.data, Wallet, wallet_container);
 
 reload([1, 2], Table, tbody);
-

@@ -3,27 +3,16 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Home</title>
-    <script defer src="/lib/police.js"></script>
+    <title>Document</title>
     <link rel="stylesheet" href="/style.css" />
   </head>
-
   <body>
     <div class="head"></div>
-
     <div class="container">
       <div class="h1">
-        <h1>Loading...</h1>
+        <h1>Мои транзакции</h1>
         <p class="email">Loading...</p>
       </div>
-
-      <section class="wallets">
-        <h2>Мои кошельки</h2>
-        <div class="wallet_container"></div>
-
-        <a href="/pages/wallets/" class="view_all">Смотреть все кошельки</a>
-      </section>
-
       <section class="transactions">
         <h3>Последние транзакции</h3>
         <table>
@@ -39,10 +28,10 @@
           <tbody></tbody>
         </table>
 
-        <a href="/pages/transactions/" class="view_all">Смотреть все оплаты</a>
+        <button class="add">Добавить транзакцию</button>
       </section>
     </div>
 
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="/pages/transactions/script.js"></script>
   </body>
 </html>

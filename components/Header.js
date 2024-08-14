@@ -19,7 +19,7 @@ export function Header() {
   email_span.innerHTML = localed.email;
   home_link.href = "/";
   wallet_link.href = "/pages/wallets/";
-  transaction_link.href = "#";
+  transaction_link.href = "/pages/transactions/";
 
   home_link.innerHTML = "Главная";
   wallet_link.innerHTML = "Мои кошелки";

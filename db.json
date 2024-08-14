@@ -1,46 +1,25 @@
 {
   "users": [
     {
-      "id": "cad0650e-b4d0-45a4-9606-1f7b824c1a6d",
+      "id": "53e880d0-d172-4033-a2d1-1000d4b724b8",
       "email": "mirkomilmuhtorov22@gmail.com",
-      "name": "Muxtorov Mirkomil",
-      "surname": "XURRAMOV",
+      "name": "Mirkomil",
+      "surname": "Muxtorov",
       "password": "Mirkomil2005"
-    },
-    {
-      "id": "9c7e1bef-84db-4b59-bf12-3c3622b910a1",
-      "email": "dsarifkulo021@gmail.com",
-      "name": "Daler",
-      "surname": "Sharifkulov",
-      "password": "1234Daler"
-    },
-    {
-      "id": "a80e0709-ffbe-4fc9-9132-f1aff09b9e1d",
-      "email": "daler@gmail.com",
-      "name": "Alisher",
-      "surname": "Fayziyev",
-      "password": "1234Daler"
     }
   ],
   "wallets": [
     {
-      "id": "e70bac58-9045-4094-8056-583be9b81dc7",
-      "userId": "9c7e1bef-84db-4b59-bf12-3c3622b910a1",
-      "createdAt": "2024-08-13T14:23:40.955Z",
-      "updatedAt": "2024-08-13T14:23:40.956Z",
+      "id": "f539da6b-f28a-4ded-b214-ac1a298d14a6",
+      "userId": "53e880d0-d172-4033-a2d1-1000d4b724b8",
+      "createdAt": "2024-08-14T09:45:14.935Z",
+      "updatedAt": "2024-08-14T09:45:14.935Z",
       "name": "Visa",
-      "currency": "UZS",
+      "currency": "USD",
       "amount": "1000"
-    },
-    {
-      "id": "00d5fcff-8b3c-48f3-89b3-aaf52a5f64e9",
-      "userId": "a80e0709-ffbe-4fc9-9132-f1aff09b9e1d",
-      "createdAt": "2024-08-13T14:26:20.316Z",
-      "updatedAt": "2024-08-13T14:26:20.316Z",
-      "name": "Visa",
-      "currency": "UZS",
-      "amount": "123213"
     }
   ],
-  "transactions": []
+  "transactions": [
+   
+  ]
 }
