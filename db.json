@@ -24,33 +24,6 @@
       "name": "Visa",
       "currency": "USD",
       "amount": "1000"
-    },
-    {
-      "id": "1291c903-23ef-4646-9c32-2a88c07a7e75",
-      "userId": "365b9a8d-d88e-48cd-996a-27179a5b81d5",
-      "createdAt": "2024-08-14T13:11:41.304Z",
-      "updatedAt": "2024-08-14T13:11:41.305Z",
-      "name": "Visa",
-      "currency": "RUB",
-      "amount": 728
-    },
-    {
-      "id": "7fc1c77d-ee95-412e-ba05-1a5b8e4bf65b",
-      "userId": "365b9a8d-d88e-48cd-996a-27179a5b81d5",
-      "createdAt": "2024-08-14T13:35:03.527Z",
-      "updatedAt": "2024-08-14T13:35:03.527Z",
-      "name": "Mastercard",
-      "currency": "EUR",
-      "amount": "1000"
-    },
-    {
-      "id": "27cc178b-8eb5-442f-88d9-111a36dcc180",
-      "userId": "365b9a8d-d88e-48cd-996a-27179a5b81d5",
-      "createdAt": "2024-08-14T13:35:15.860Z",
-      "updatedAt": "2024-08-14T13:35:15.860Z",
-      "name": "HUMO",
-      "currency": "UZS",
-      "amount": 76000
     }
   ],
   "transactions": [
@@ -82,51 +55,6 @@
         "name": "Visa",
         "currency": "RUB",
         "amount": 800
-      }
-    },
-    {
-      "id": "e5e8ca3d-b42a-447c-909c-465ea73ed4a0",
-      "createdAt": "2024-08-14T13:26:26.415Z",
-      "updatedAt": "2024-08-14T13:26:26.415Z",
-      "walletId": "1291c903-23ef-4646-9c32-2a88c07a7e75",
-      "total": "20",
-      "category": "food",
-      "wallet": {
-        "createdAt": "2024-08-14T13:11:41.304Z",
-        "updatedAt": "2024-08-14T13:11:41.305Z",
-        "name": "Visa",
-        "currency": "RUB",
-        "amount": 770
-      }
-    },
-    {
-      "id": "80d81399-02ab-465a-afe5-ba5a804c58d2",
-      "createdAt": "2024-08-14T13:34:15.961Z",
-      "updatedAt": "2024-08-14T13:34:15.961Z",
-      "walletId": "1291c903-23ef-4646-9c32-2a88c07a7e75",
-      "total": "22",
-      "category": "car",
-      "wallet": {
-        "createdAt": "2024-08-14T13:11:41.304Z",
-        "updatedAt": "2024-08-14T13:11:41.305Z",
-        "name": "Visa",
-        "currency": "RUB",
-        "amount": 750
-      }
-    },
-    {
-      "id": "55dbc41b-67a5-4bec-be1a-68703a5dd615",
-      "createdAt": "2024-08-14T13:36:10.606Z",
-      "updatedAt": "2024-08-14T13:36:10.606Z",
-      "walletId": "27cc178b-8eb5-442f-88d9-111a36dcc180",
-      "total": "24000",
-      "category": "food",
-      "wallet": {
-        "createdAt": "2024-08-14T13:35:15.860Z",
-        "updatedAt": "2024-08-14T13:35:15.860Z",
-        "name": "HUMO",
-        "currency": "UZS",
-        "amount": "100000"
       }
     }
   ]

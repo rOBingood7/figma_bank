@@ -15,7 +15,8 @@ h1.innerHTML = `Добро пожаловать, ${localed.name} ${localed.surna
 email.innerHTML = localed.email;
 
 const res = await getData("/wallets?userId=" + localed.id);
+const res_trans = await getData("/transactions?userId=" + localed.id);
 
 reload(res.data, Wallet, wallet_container);
 
-reload([1, 2], Table, tbody);
+reload(res_trans.data, Table, tbody);
