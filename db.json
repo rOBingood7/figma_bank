@@ -24,38 +24,25 @@
       "name": "Visa",
       "currency": "USD",
       "amount": "1000"
-    }
-  ],
-  "transactions": [
-    {
-      "id": "a205a3a8-fa4d-4468-a6a4-12e7c2920cd1",
-      "createdAt": "2024-08-14T13:24:06.739Z",
-      "updatedAt": "2024-08-14T13:24:06.739Z",
-      "walletId": "1291c903-23ef-4646-9c32-2a88c07a7e75",
-      "total": "200",
-      "category": "car",
-      "wallet": {
-        "createdAt": "2024-08-14T13:11:41.304Z",
-        "updatedAt": "2024-08-14T13:11:41.305Z",
-        "name": "Visa",
-        "currency": "RUB",
-        "amount": "1000"
-      }
     },
     {
-      "id": "807cf2cb-985e-4249-b7a2-f9cb790e1c6e",
-      "createdAt": "2024-08-14T13:25:56.722Z",
-      "updatedAt": "2024-08-14T13:25:56.722Z",
-      "walletId": "1291c903-23ef-4646-9c32-2a88c07a7e75",
-      "total": "30",
-      "category": "food",
-      "wallet": {
-        "createdAt": "2024-08-14T13:11:41.304Z",
-        "updatedAt": "2024-08-14T13:11:41.305Z",
-        "name": "Visa",
-        "currency": "RUB",
-        "amount": 800
-      }
+      "id": "adb303f1-840d-44d0-bd7c-843c0418d2ac",
+      "userId": "365b9a8d-d88e-48cd-996a-27179a5b81d5",
+      "createdAt": "2024-08-16T13:15:32.701Z",
+      "updatedAt": "2024-08-16T13:15:32.701Z",
+      "name": "HUMO",
+      "currency": "VND",
+      "amount": "100"
+    },
+    {
+      "id": "2f7a74cb-79b1-40c5-81f3-9c2a3953c2f5",
+      "userId": "365b9a8d-d88e-48cd-996a-27179a5b81d5",
+      "createdAt": "2024-08-16T13:15:52.717Z",
+      "updatedAt": "2024-08-16T13:15:52.717Z",
+      "name": "VISA",
+      "currency": "AFN",
+      "amount": "100"
     }
-  ]
+  ],
+  "transactions": []
 }

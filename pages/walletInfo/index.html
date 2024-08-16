@@ -1,76 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Информация о кошельке</title>
-    <link rel="stylesheet" href="/pages/walletInfo/style.css" />
-  </head>
-  <body>
-    <div class="container">
-      <h2>Dashboard</h2>
-      <div class="payment_methods">
-        <h3>Payment Methods</h3>
-        <div class="payment_method">
-          <button class="card">
-            <div class="card_info">
-              <p>Visa *1234</p>
-              <p>Expires 12/24</p>
-            </div>
-          </button>
-          <button class="card">
-            <div class="card_info">
-              <p>Mastercard *5678</p>
-              <p>Expires 06/25</p>
-            </div>
-          </button>
-          <button class="card">
-            <div class="card_info">
-              <p>Amex *9012</p>
-              <p>Expires 09/26</p>
-            </div>
-          </button>
-          <button class="card">
-            <div class="card_info">
-              <p>Apple Pay</p>
-              <p>Last used: 2023-04-20</p>
-            </div>
-          </button>
-        </div>
-      </div>
 
-      <section class="dashboard">
-        <div class="transaction_history">
-          <h3>Transaction History</h3>
-          <div class="filter">
-            <select class="currencies"></select>
-            <select class="days">
-              <option value="last30">Last 30 days</option>
-              <option value="last60">Last 60 days</option>
-              <option value="last90">Last 90 days</option>
-            </select>
-          </div>
-          <div class="chart"></div>
-        </div>
-        <div class="currency_conversion">
-          <h3>Currency Conversion</h3>
-          <form class="conversion_form">
-            <div>
-              <select class="currencies"></select>
-              <span class="arrow">→</span>
-              <select class="currencies"></select>
-            </div>
-            <div>
-              <input type="text" placeholder="100" />
-              <button>Convert</button>
-            </div>
-          </form>
-        </div>
-      </section>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Информация о кошельке</title>
+	<link rel="stylesheet" href="/pages/walletInfo/style.css" />
+</head>
 
-      <div class="wallet_container" data-tilt data-tilt-reverse="true"></div>
-    </div>
+<body>
+	<div class="container">
+		<h2>Dashboard</h2>
+		<div class="payment_methods">
+			<h3>Payment Methods</h3>
+			<div class="payment_method">
+				<button class="card">
+					<div class="card_info">
+						<p>Visa *1234</p>
+						<p>Expires 12/24</p>
+					</div>
+				</button>
+				<button class="card">
+					<div class="card_info">
+						<p>Mastercard *5678</p>
+						<p>Expires 06/25</p>
+					</div>
+				</button>
+				<button class="card">
+					<div class="card_info">
+						<p>Amex *9012</p>
+						<p>Expires 09/26</p>
+					</div>
+				</button>
+				<button class="card">
+					<div class="card_info">
+						<p>Apple Pay</p>
+						<p>Last used: 2023-04-20</p>
+					</div>
+				</button>
+			</div>
+		</div>
 
-    <script type="module" src="/pages/walletInfo/script.js"></script>
-  </body>
+		<section class="dashboard">
+			<div class="transaction_history">
+				<h3>Transaction History</h3>
+				<div class="filter">
+					<select class="currencies"></select>
+					<select class="days">
+						<option value="last30">Last 30 days</option>
+						<option value="last60">Last 60 days</option>
+						<option value="last90">Last 90 days</option>
+					</select>
+				</div>
+				<div class="chart"></div>
+			</div>
+			<div class="currency_conversion">
+				<h3>Currency Conversion</h3>
+				<form class="conversion_form">
+					<div>
+						<select name="from" class="currencies"></select>
+						<span class="arrow">→</span>
+						<select name="to" class="currencies"></select>
+					</div>
+					<div>
+						<input name="amount" type="text" placeholder="100" />
+						<button>Convert</button>
+					</div>
+				</form>
+			</div>
+		</section>
+
+		<div class="wallet_container"></div>
+	</div>
+
+	<script type="module" src="/pages/walletInfo/script.js"></script>
+</body>
+
 </html>
