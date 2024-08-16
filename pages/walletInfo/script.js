@@ -1,4 +1,5 @@
 import VanillaTilt from "vanilla-tilt";
+import Chart from 'chart.js/auto';
 import {
 	Wallet
 } from "../../components/Wallet";
@@ -10,6 +11,7 @@ import {
 	reload
 } from "../../lib/utills";
 
+
 const currencies = document.querySelectorAll(".currencies");
 const conversion_form = document.querySelector("form");
 const wallet_container = document.querySelector(".wallet_container");
@@ -20,8 +22,8 @@ const localed = JSON.parse(localStorage.getItem("user"));
 const id = location.search.split('=').at(-1)
 
 const res_currencies = await getData_Fixer("/list");
-// const res_conversion = await getData_Fixer("/convert");
 const res = await getData("/wallets/" + id);
+
 
 cards.forEach((card) => {
 	card.onclick = () => {
@@ -54,7 +56,29 @@ conversion_form.onsubmit = async (e) => {
 
 	new FormData(e.target).forEach((val, key) => convertData[key] = val)
 
-	console.log(convertData);
+	const {to, from, amount} = convertData
+	
+	const res = await getData_Fixer(`/convert?to=${to}&from=${from}&amount=${amount}`)
+
+	console.log(res);
 };
 
 reload([res.data], Wallet, wallet_container);
+
+const transactions = await getData("/transactions?walletId=" + id);
+
+const ctx = document.querySelector('#canvas')
+
+new Chart(ctx, {
+	type: "line",
+	data: {
+	labels: ["Ansor", "Umarjon", "MuhammadAziz", "Sherobod", "Mirkomil", "Xondamir"],
+	datasets: [{
+		label: 'My First Dataset',
+		data: [7.1,5.4,2.0,3.0,8.4,7.0],
+		fill: false,
+		borderColor: 'rgb(75, 192, 192)',
+		tension: 0.1
+	}]
+	}
+})
