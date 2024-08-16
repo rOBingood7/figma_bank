@@ -23,7 +23,7 @@
       "updatedAt": "2024-08-14T09:45:14.935Z",
       "name": "Visa",
       "currency": "USD",
-      "amount": "1000"
+      "amount": 775
     },
     {
       "id": "adb303f1-840d-44d0-bd7c-843c0418d2ac",
@@ -42,7 +42,76 @@
       "name": "VISA",
       "currency": "AFN",
       "amount": "100"
+    },
+    {
+      "id": "d7ffba96-e492-4ab3-992e-328fc8964ad8",
+      "userId": "53e880d0-d172-4033-a2d1-1000d4b724b8",
+      "createdAt": "2024-08-16T14:29:59.311Z",
+      "updatedAt": "2024-08-16T14:29:59.311Z",
+      "name": "jjjj",
+      "amount": "12000"
     }
   ],
-  "transactions": []
+  "transactions": [
+    {
+      "id": "faf6803c-b12b-4b36-b425-06af5d1267e8",
+      "createdAt": "2024-08-16T14:16:01.850Z",
+      "updatedAt": "2024-08-16T14:16:01.850Z",
+      "walletId": "f539da6b-f28a-4ded-b214-ac1a298d14a6",
+      "total": "100",
+      "category": "Food",
+      "wallet": {
+        "createdAt": "2024-08-14T09:45:14.935Z",
+        "updatedAt": "2024-08-14T09:45:14.935Z",
+        "name": "Visa",
+        "currency": "USD",
+        "amount": "1000"
+      }
+    },
+    {
+      "id": "867f978f-33d7-41f6-bbaf-1cbaaf47239d",
+      "createdAt": "2024-08-16T14:16:10.224Z",
+      "updatedAt": "2024-08-16T14:16:10.224Z",
+      "walletId": "f539da6b-f28a-4ded-b214-ac1a298d14a6",
+      "total": "50",
+      "category": "Transport",
+      "wallet": {
+        "createdAt": "2024-08-14T09:45:14.935Z",
+        "updatedAt": "2024-08-14T09:45:14.935Z",
+        "name": "Visa",
+        "currency": "USD",
+        "amount": 900
+      }
+    },
+    {
+      "id": "f88b80c9-236c-4e92-864b-6e70ae8af381",
+      "createdAt": "2024-08-16T14:16:22.652Z",
+      "updatedAt": "2024-08-16T14:16:22.652Z",
+      "walletId": "f539da6b-f28a-4ded-b214-ac1a298d14a6",
+      "total": "25",
+      "category": "Grocery",
+      "wallet": {
+        "createdAt": "2024-08-14T09:45:14.935Z",
+        "updatedAt": "2024-08-14T09:45:14.935Z",
+        "name": "Visa",
+        "currency": "USD",
+        "amount": 850
+      }
+    },
+    {
+      "id": "96bf50a9-3d16-4397-80f7-b42c93937bae",
+      "createdAt": "2024-08-16T14:16:37.308Z",
+      "updatedAt": "2024-08-16T14:16:37.308Z",
+      "walletId": "f539da6b-f28a-4ded-b214-ac1a298d14a6",
+      "total": "50",
+      "category": "Petrol",
+      "wallet": {
+        "createdAt": "2024-08-14T09:45:14.935Z",
+        "updatedAt": "2024-08-14T09:45:14.935Z",
+        "name": "Visa",
+        "currency": "USD",
+        "amount": 825
+      }
+    }
+  ]
 }

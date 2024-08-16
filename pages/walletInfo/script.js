@@ -10,6 +10,7 @@ import {
 import {
 	reload
 } from "../../lib/utills";
+import moment from "moment";
 
 
 const currencies = document.querySelectorAll(".currencies");
@@ -69,13 +70,16 @@ const transactions = await getData("/transactions?walletId=" + id);
 
 const ctx = document.querySelector('#canvas')
 
+
+
+
 new Chart(ctx, {
 	type: "line",
 	data: {
-	labels: ["Ansor", "Umarjon", "MuhammadAziz", "Sherobod", "Mirkomil", "Xondamir"],
+	labels: transactions.data.map(item => moment(item.createdAt).fromNow()),
 	datasets: [{
 		label: 'My First Dataset',
-		data: [7.1,5.4,2.0,3.0,8.4,7.0],
+		data: transactions.data.map(item => item.total),
 		fill: false,
 		borderColor: 'rgb(75, 192, 192)',
 		tension: 0.1
