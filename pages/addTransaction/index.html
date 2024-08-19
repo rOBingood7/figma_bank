@@ -1,27 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Добавить транзакцию</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="/pages/signup/style.css" />
+  </head>
 
-<head>
-	<meta charset="UTF-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Добавить транзакцию</title>
-	<link rel="stylesheet" href="/pages/signup/style.css" />
-</head>
-
-<body>
-	<div class="container">
-		<form class="registration_form">
-			<h1>Добавить транзакцию</h1>
-
-			<!-- <input type="text" name="walletName" placeholder="Из кошелька" /> -->
-			 <select name="walletId" required ></select>
-			<input type="number" name="total" placeholder="Сумма" />
-			<input type="text" name="category" placeholder="Категория" />
-			<button type="submit">Продолжить</button>
-		</form>
-	</div>
-
-	<script type="module" src="/pages/addTransaction/script.js"></script>
-</body>
-
+  <body>
+    <div class="container">
+      <form class="registration_form">
+        <h1>Добавить транзакцию</h1>
+        <select name="walletId" required></select>
+        <input type="number" name="total" placeholder="Сумма" />
+        <input type="text" name="category" placeholder="Категория" />
+        <button type="submit">Продолжить</button>
+      </form>
+    </div>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+    <script type="module" src="/pages/addTransaction/script.js"></script>
+  </body>
 </html>

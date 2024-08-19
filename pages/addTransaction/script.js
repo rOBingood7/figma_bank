@@ -1,63 +1,109 @@
-import {
-	getData,
-	patchData,
-	postData
-} from "../../lib/http.request";
+import { getData, patchData, postData } from "../../lib/http.request";
+import Toastify from "toastify-js";
 
+const patterns = {
+  category: /^[a-zA-Zа-яА-Я\s\-']+$/,
+  total: /^\d+(\.\d{1,2})?$/,
+};
+const inps = document.querySelectorAll("input");
 const form = document.querySelector("form");
 const select = form.querySelector("select");
-const user_string = localStorage.getItem("user");
-const userId = JSON.parse(user_string).id;
-let wallets = []
+let wallets = [];
 
-form.onsubmit = (e) => {
-	e.preventDefault();
-	submit(e.target);
+inps.forEach((inp) => {
+  inp.onkeyup = (e) => {
+    const val = e.target.value;
+    const pattern = patterns[inp.name];
+
+    if (pattern && pattern.test(val)) {
+      inp.classList.remove("error");
+      inp.classList.add("correct");
+    } else {
+      inp.classList.remove("correct");
+      inp.classList.add("error");
+    }
+    pattern.lastIndex = 0;
+  };
+});
+
+form.onsubmit = async (e) => {
+  e.preventDefault();
+  await submit(e.target);
 };
 
 async function submit(target) {
-	const fm = new FormData(target);
+  const fm = new FormData(target);
+  const transaction = {
+    id: crypto.randomUUID(),
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
+  };
+  fm.forEach((val, key) => (transaction[key] = val));
 
-	const transaction = {
-		id: crypto.randomUUID(),
-		createdAt: new Date().toISOString(),
-		updatedAt: new Date().toISOString(),
-	};
+  const finded_wallet = wallets.find(
+    (item) => item.id === transaction.walletId
+  );
 
-	fm.forEach((val, key) => (transaction[key] = val));
+  if (Number(transaction.total) > Number(finded_wallet.amount)) {
+    Toastify({
+      text: "Недостаточно денег на счету!",
+      gravity: "top",
+      position: "center",
+    }).showToast();
+    return;
+  }
 
-	const findedWallet = wallets.find(item => item.id ===  transaction.walletId) 
-	
-	if(Number(transaction.total) > Number(findedWallet.amount)) {
-		alert('Недостаточно денег на счету!')
-		return
-	}
+  const updated_wallet = {
+    ...finded_wallet,
+    amount: finded_wallet.amount - transaction.total,
+  };
+  delete updated_wallet.id;
+  delete updated_wallet.userId;
 
-	delete findedWallet.id
-	delete findedWallet.userId
+  transaction.wallet = updated_wallet;
 
-	transaction.wallet = findedWallet
+  try {
+    const res = await patchData(`/wallets/${transaction.walletId}`, {
+      amount: updated_wallet.amount,
+    });
 
-	const res = await patchData('/wallets/' + transaction.walletId, {amount: findedWallet.amount - transaction.total})
+    if (res.status !== 200) {
+      throw new Error("Не получилось выполнить транзакцию!");
+    }
 
-	if(res.status !== 200) {
-		alert('Не получилось выполнить транзакцию!')
-		return
-	}
+    await postData("/transactions", transaction);
 
-	await postData("/transactions", transaction);
+    form.reset();
+    Toastify({
+      text: "Транзакция успешно выполнена!",
+      gravity: "top",
+      position: "center",
+    }).showToast();
 
-	form.reset();
-	location.assign("/pages/transactions/");
+    setTimeout(() => {
+      location.assign("/pages/transactions/");
+    }, 500);
+  } catch (error) {
+    console.error("Error:", error);
+    Toastify({
+      text: `Произошла ошибка: ${error.message}`,
+      gravity: "top",
+      position: "center",
+    }).showToast();
+  }
 }
 
-const res = await getData('/wallets?userId=' + userId)
+const user_string = localStorage.getItem("user");
+const userId = JSON.parse(user_string).id;
 
-if(res.status === 200) {
-	wallets = res.data
-	for(let item of res.data) {
-		let opt = new Option(item.name, item.id)
-		select.append(opt)
-	}
+const res = await getData(`/wallets?userId=${userId}`);
+
+if (res.status === 200 && res.data.length > 0) {
+  wallets = res.data;
+  for (let item of wallets) {
+    let opt = new Option(item.name, item.id);
+    select.append(opt);
+  }
+} else {
+  throw new Error("Не удалось загрузить кошельки.");
 }
-

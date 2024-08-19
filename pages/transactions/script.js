@@ -1,15 +1,7 @@
-import {
-  Header
-} from "../../components/Header";
-import {
-  Table
-} from "../../components/Table";
-import {
-  getData
-} from "../../lib/http.request";
-import {
-  reload
-} from "../../lib/utills";
+import { Header } from "../../components/Header";
+import { Table } from "../../components/Table";
+import { getData } from "../../lib/http.request";
+import { reload } from "../../lib/utills";
 
 Header();
 
@@ -23,10 +15,12 @@ add_btn.onclick = () => {
   location.assign("/pages/addTransaction/");
 };
 
+const { data } = await getData("/transactions?userId=" + localed.id);
 
-const {
-  data
-} = await getData('/transactions?userId=' + localed.id)
-
-
-reload(data.toSorted((a, b) => new Date(a.createdAt) > new Date(b.createdAt) ? -1 : 1 ), Table, tbody);
+reload(
+  data.toSorted((a, b) =>
+    new Date(a.createdAt) > new Date(b.createdAt) ? -1 : 1
+  ),
+  Table,
+  tbody
+);

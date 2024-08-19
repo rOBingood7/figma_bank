@@ -1,10 +1,11 @@
 import { getData, postData } from "../../lib/http.request";
+import Toastify from "toastify-js";
 
 const patterns = {
-  name: /^[a-z ,.'-]+$/i,
-  surname: /^[a-z ,.'-]+$/i,
-  email: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/g,
-  password: /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,}$/,
+  name: /^[A-Za-z]+$/,
+  surname: /^[A-Za-z]+$/,
+  email: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i,
+  password: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[A-Za-z\d]{8,}$/,
 };
 
 const inps = document.querySelectorAll("input");
@@ -16,14 +17,16 @@ inps.forEach((inp) => {
 
     if (patterns[inp.name].test(val)) {
       inp.classList.remove("error");
+      inp.classList.add("correct");
     } else {
+      inp.classList.remove("correct");
       inp.classList.add("error");
     }
     patterns[inp.name].lastIndex = 0;
   };
 });
 
-form.onsubmit = (e) => {
+form.onsubmit = async (e) => {
   e.preventDefault();
 
   let isError = false;
@@ -36,10 +39,14 @@ form.onsubmit = (e) => {
   });
 
   if (isError) {
-    alert("Error");
+    Toastify({
+      text: "Пожалуйста, исправьте ошибки в форме.",
+      gravity: "top",
+      position: "center",
+    }).showToast();
     return;
   } else {
-    submit(e.target);
+    await submit(e.target);
   }
 };
 
@@ -47,19 +54,42 @@ async function submit(target) {
   const fm = new FormData(target);
   const user = {
     id: crypto.randomUUID(),
-    createdAt: new Date().toISOString,
-    updatedAt: new Date().toISOString,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString(),
   };
 
   fm.forEach((val, key) => (user[key] = val));
 
-  const users = await getData("/users?email=" + user.email);
+  try {
+    const users = await getData(`/users?email=${user.email}`);
 
-  if (users.data.length > 0) {
-    alert("Пользователь уже зарегистрирован");
-    return;
+    if (users.data.length > 0) {
+      Toastify({
+        text: "Пользователь уже зарегистрирован",
+        gravity: "top",
+        position: "center",
+      }).showToast();
+      return;
+    }
+
+    await postData("/users", user);
+    form.reset();
+
+    Toastify({
+      text: "Регистрация успешна!",
+      gravity: "top",
+      position: "center",
+    }).showToast();
+
+    setTimeout(() => {
+      location.assign("/pages/signin/");
+    }, 500);
+  } catch (error) {
+    console.error("Error:", error);
+    Toastify({
+      text: "Произошла ошибка.",
+      gravity: "top",
+      position: "center",
+    }).showToast();
   }
-  await postData("/users", user);
-  form.reset();
-  location.assign("/pages/signin/");
 }

@@ -89,5 +89,8 @@ body {
 }
 
 .error {
-  border: 3px solid red;
+  border: 3px solid red !important;
+}
+.correct {
+  border: 3px solid blue !important;
 }

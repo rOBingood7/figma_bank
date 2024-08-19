@@ -1,116 +1,116 @@
 {
   "users": [
     {
-      "id": "53e880d0-d172-4033-a2d1-1000d4b724b8",
+      "id": "590eeb7e-fa03-4246-8a95-0e087cf14819",
+      "createdAt": "2024-08-19T09:42:56.199Z",
+      "updatedAt": "2024-08-19T09:42:56.199Z",
       "email": "mirkomilmuhtorov22@gmail.com",
       "name": "Mirkomil",
       "surname": "Muxtorov",
       "password": "Mirkomil2005"
-    },
-    {
-      "id": "365b9a8d-d88e-48cd-996a-27179a5b81d5",
-      "email": "dsarifkulo021@gmail.com",
-      "name": "Daler",
-      "surname": "Sharifkulov",
-      "password": "1234Daler"
     }
   ],
   "wallets": [
     {
-      "id": "f539da6b-f28a-4ded-b214-ac1a298d14a6",
-      "userId": "53e880d0-d172-4033-a2d1-1000d4b724b8",
-      "createdAt": "2024-08-14T09:45:14.935Z",
-      "updatedAt": "2024-08-14T09:45:14.935Z",
-      "name": "Visa",
-      "currency": "USD",
-      "amount": 775
-    },
-    {
-      "id": "adb303f1-840d-44d0-bd7c-843c0418d2ac",
-      "userId": "365b9a8d-d88e-48cd-996a-27179a5b81d5",
-      "createdAt": "2024-08-16T13:15:32.701Z",
-      "updatedAt": "2024-08-16T13:15:32.701Z",
-      "name": "HUMO",
-      "currency": "VND",
-      "amount": "100"
-    },
-    {
-      "id": "2f7a74cb-79b1-40c5-81f3-9c2a3953c2f5",
-      "userId": "365b9a8d-d88e-48cd-996a-27179a5b81d5",
-      "createdAt": "2024-08-16T13:15:52.717Z",
-      "updatedAt": "2024-08-16T13:15:52.717Z",
+      "id": "56a2bd9e-c485-4e52-9b7c-6a6bcef79e3e",
+      "userId": "590eeb7e-fa03-4246-8a95-0e087cf14819",
+      "createdAt": "2024-08-19T10:42:38.133Z",
+      "updatedAt": "2024-08-19T10:42:38.133Z",
       "name": "VISA",
-      "currency": "AFN",
-      "amount": "100"
+      "manual_сurrency": "USD",
+      "amount": 240,
+      "currency": "USD"
     },
     {
-      "id": "d7ffba96-e492-4ab3-992e-328fc8964ad8",
-      "userId": "53e880d0-d172-4033-a2d1-1000d4b724b8",
-      "createdAt": "2024-08-16T14:29:59.311Z",
-      "updatedAt": "2024-08-16T14:29:59.311Z",
-      "name": "jjjj",
-      "amount": "12000"
+      "id": "d97195f2-db8a-474c-97ed-2403c1e88fa5",
+      "userId": "590eeb7e-fa03-4246-8a95-0e087cf14819",
+      "createdAt": "2024-08-19T10:43:00.182Z",
+      "updatedAt": "2024-08-19T10:43:00.182Z",
+      "name": "MASTERCARD",
+      "manual_сurrency": "EUR",
+      "amount": 400,
+      "currency": "EUR"
     }
   ],
   "transactions": [
     {
-      "id": "faf6803c-b12b-4b36-b425-06af5d1267e8",
-      "createdAt": "2024-08-16T14:16:01.850Z",
-      "updatedAt": "2024-08-16T14:16:01.850Z",
-      "walletId": "f539da6b-f28a-4ded-b214-ac1a298d14a6",
-      "total": "100",
+      "id": "56d05195-da32-4315-92a2-cf8d996dcb36",
+      "createdAt": "2024-08-19T10:52:52.884Z",
+      "updatedAt": "2024-08-19T10:52:52.884Z",
+      "walletId": "56a2bd9e-c485-4e52-9b7c-6a6bcef79e3e",
+      "total": "500",
       "category": "Food",
       "wallet": {
-        "createdAt": "2024-08-14T09:45:14.935Z",
-        "updatedAt": "2024-08-14T09:45:14.935Z",
-        "name": "Visa",
-        "currency": "USD",
-        "amount": "1000"
+        "createdAt": "2024-08-19T10:42:38.133Z",
+        "updatedAt": "2024-08-19T10:42:38.133Z",
+        "name": "VISA",
+        "manual_сurrency": "USD",
+        "amount": 500,
+        "currency": "USD"
       }
     },
     {
-      "id": "867f978f-33d7-41f6-bbaf-1cbaaf47239d",
-      "createdAt": "2024-08-16T14:16:10.224Z",
-      "updatedAt": "2024-08-16T14:16:10.224Z",
-      "walletId": "f539da6b-f28a-4ded-b214-ac1a298d14a6",
+      "id": "88cfad9d-3812-41db-acac-079456b9d136",
+      "createdAt": "2024-08-19T10:53:20.178Z",
+      "updatedAt": "2024-08-19T10:53:20.178Z",
+      "walletId": "d97195f2-db8a-474c-97ed-2403c1e88fa5",
+      "total": "100",
+      "category": "Entertainment",
+      "wallet": {
+        "createdAt": "2024-08-19T10:43:00.182Z",
+        "updatedAt": "2024-08-19T10:43:00.182Z",
+        "name": "MASTERCARD",
+        "manual_сurrency": "EUR",
+        "amount": 400,
+        "currency": "EUR"
+      }
+    },
+    {
+      "id": "37020e11-250a-4ec4-a057-1f8810499e22",
+      "createdAt": "2024-08-19T11:03:00.041Z",
+      "updatedAt": "2024-08-19T11:03:00.041Z",
+      "walletId": "56a2bd9e-c485-4e52-9b7c-6a6bcef79e3e",
       "total": "50",
       "category": "Transport",
       "wallet": {
-        "createdAt": "2024-08-14T09:45:14.935Z",
-        "updatedAt": "2024-08-14T09:45:14.935Z",
-        "name": "Visa",
-        "currency": "USD",
-        "amount": 900
+        "createdAt": "2024-08-19T10:42:38.133Z",
+        "updatedAt": "2024-08-19T10:42:38.133Z",
+        "name": "VISA",
+        "manual_сurrency": "USD",
+        "amount": 450,
+        "currency": "USD"
       }
     },
     {
-      "id": "f88b80c9-236c-4e92-864b-6e70ae8af381",
-      "createdAt": "2024-08-16T14:16:22.652Z",
-      "updatedAt": "2024-08-16T14:16:22.652Z",
-      "walletId": "f539da6b-f28a-4ded-b214-ac1a298d14a6",
-      "total": "25",
-      "category": "Grocery",
+      "id": "eb9ec3c2-cc72-4788-a9e1-a05d8e365269",
+      "createdAt": "2024-08-19T11:03:31.149Z",
+      "updatedAt": "2024-08-19T11:03:31.149Z",
+      "walletId": "56a2bd9e-c485-4e52-9b7c-6a6bcef79e3e",
+      "total": "10",
+      "category": "Fanta",
       "wallet": {
-        "createdAt": "2024-08-14T09:45:14.935Z",
-        "updatedAt": "2024-08-14T09:45:14.935Z",
-        "name": "Visa",
-        "currency": "USD",
-        "amount": 850
+        "createdAt": "2024-08-19T10:42:38.133Z",
+        "updatedAt": "2024-08-19T10:42:38.133Z",
+        "name": "VISA",
+        "manual_сurrency": "USD",
+        "amount": 440,
+        "currency": "USD"
       }
     },
     {
-      "id": "96bf50a9-3d16-4397-80f7-b42c93937bae",
-      "createdAt": "2024-08-16T14:16:37.308Z",
-      "updatedAt": "2024-08-16T14:16:37.308Z",
-      "walletId": "f539da6b-f28a-4ded-b214-ac1a298d14a6",
-      "total": "50",
-      "category": "Petrol",
+      "id": "b3897287-7261-49ca-8fb8-52385d22523d",
+      "createdAt": "2024-08-19T11:03:41.139Z",
+      "updatedAt": "2024-08-19T11:03:41.139Z",
+      "walletId": "56a2bd9e-c485-4e52-9b7c-6a6bcef79e3e",
+      "total": "200",
+      "category": "Wepro",
       "wallet": {
-        "createdAt": "2024-08-14T09:45:14.935Z",
-        "updatedAt": "2024-08-14T09:45:14.935Z",
-        "name": "Visa",
-        "currency": "USD",
-        "amount": 825
+        "createdAt": "2024-08-19T10:42:38.133Z",
+        "updatedAt": "2024-08-19T10:42:38.133Z",
+        "name": "VISA",
+        "manual_сurrency": "USD",
+        "amount": 240,
+        "currency": "USD"
       }
     }
   ]
