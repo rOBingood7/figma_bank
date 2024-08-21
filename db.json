@@ -39,6 +39,16 @@
       "manual_сurrency": "EUR",
       "amount": 400,
       "currency": "EUR"
+    },
+    {
+      "id": "9d71a75c-b155-4bd3-b803-b9001c2c5d00",
+      "userId": "43341bba-3b7c-44a0-8432-f52b4802df7b",
+      "createdAt": "2024-08-21T13:45:31.816Z",
+      "updatedAt": "2024-08-21T13:45:31.816Z",
+      "name": "Visa",
+      "manual_сurrency": "USD",
+      "amount": 316,
+      "currency": "USD"
     }
   ],
   "transactions": [
@@ -119,6 +129,54 @@
         "name": "VISA",
         "manual_сurrency": "USD",
         "amount": 240,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "15090b7b-41e6-48ce-b100-8bbb0760d658",
+      "createdAt": "2024-08-21T13:45:58.642Z",
+      "updatedAt": "2024-08-21T13:45:58.642Z",
+      "walletId": "9d71a75c-b155-4bd3-b803-b9001c2c5d00",
+      "total": "240",
+      "category": "Food",
+      "wallet": {
+        "createdAt": "2024-08-21T13:45:31.816Z",
+        "updatedAt": "2024-08-21T13:45:31.816Z",
+        "name": "Visa",
+        "manual_сurrency": "USD",
+        "amount": 760,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "435965e1-4377-4073-adfe-5582b84b60f7",
+      "createdAt": "2024-08-21T13:46:12.469Z",
+      "updatedAt": "2024-08-21T13:46:12.469Z",
+      "walletId": "9d71a75c-b155-4bd3-b803-b9001c2c5d00",
+      "total": "120",
+      "category": "Obed",
+      "wallet": {
+        "createdAt": "2024-08-21T13:45:31.816Z",
+        "updatedAt": "2024-08-21T13:45:31.816Z",
+        "name": "Visa",
+        "manual_сurrency": "USD",
+        "amount": 640,
+        "currency": "USD"
+      }
+    },
+    {
+      "id": "0a63dab1-583f-4041-9c64-d828f6423b6d",
+      "createdAt": "2024-08-21T13:46:39.916Z",
+      "updatedAt": "2024-08-21T13:46:39.916Z",
+      "walletId": "9d71a75c-b155-4bd3-b803-b9001c2c5d00",
+      "total": "324",
+      "category": "Car",
+      "wallet": {
+        "createdAt": "2024-08-21T13:45:31.816Z",
+        "updatedAt": "2024-08-21T13:45:31.816Z",
+        "name": "Visa",
+        "manual_сurrency": "USD",
+        "amount": 316,
         "currency": "USD"
       }
     }
