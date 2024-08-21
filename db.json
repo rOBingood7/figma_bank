@@ -8,6 +8,15 @@
       "name": "Mirkomil",
       "surname": "Muxtorov",
       "password": "Mirkomil2005"
+    },
+    {
+      "id": "43341bba-3b7c-44a0-8432-f52b4802df7b",
+      "createdAt": "2024-08-21T13:15:37.337Z",
+      "updatedAt": "2024-08-21T13:15:37.337Z",
+      "email": "dsarifkulo021@gmail.com",
+      "name": "Daler",
+      "surname": "Sharifkulov",
+      "password": "1234Daler"
     }
   ],
   "wallets": [
